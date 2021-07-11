@@ -1,0 +1,8 @@
+ - [07/05/21 21:43:10] <Info>: Waiting for DFU devices
+ - [07/05/21 21:43:10] <Verbose>: DFU mode device found
+ - [07/05/21 21:43:10] <Info>: Exploiting
+ - [07/05/21 21:43:10] <Verbose>: Attempting to perform checkm8 on 8930 20...
+ - [07/05/21 21:43:10] <Info>: Checking if device is ready
+ - [07/05/21 21:43:10] <Verbose>: == Checkm8 Preparation stage ==
+ - [07/05/21 21:43:10] <Error>: Yeah I don't think this device is supported, sorry. (error code: -41)
+ - [07/05/21 21:43:20] <Error>: Timed out in state 0, assuming we are back to square one with this device. (error code: -31)
