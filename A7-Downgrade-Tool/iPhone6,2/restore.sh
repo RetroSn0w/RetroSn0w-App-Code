@@ -35,9 +35,9 @@ ecid=$(./tools/igetnonce | grep "ECID=.*" -o | cut -c 6-)
 echo "$ecid"
 ./tools/tsschecker -m iPhone6,2/iPhone6,2.plist -e $ecid -d iPhone6,2 -s -B n53ap --apnonce $nonce
 mv *.shsh blob.shsh2
-./tools/irecovery -f tools/blankfile.txt
-./tools/irecovery -f iPhone6,2/temp/iBSS.iphone6.RELEASE.im4p
-./tools/irecovery -f iPhone6,2/temp/iBEC.iphone6.RELEASE.im4p
+./tools/dependencies/libirecovery/tools/irecovery -f tools/blankfile.txt
+./tools/dependencies/libirecovery/tools/irecovery -f iPhone6,2/temp/iBSS.iphone6.RELEASE.im4p
+./tools/dependencies/libirecovery/tools/irecovery -f iPhone6,2/temp/iBEC.iphone6.RELEASE.im4p
 sleep 5
 ./tools/futurerestore -t blob.shsh2 -b iPhone6,2/temp/baseband.bbfw -p iPhone6,2/iPhone6,2.plist -s iPhone6,2/temp/sep.im4p -m iPhone6,2/iPhone6,2.plist iPhone6,2/work
 cd iPhone6,2
