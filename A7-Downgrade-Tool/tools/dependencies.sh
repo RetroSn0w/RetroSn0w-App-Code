@@ -11,6 +11,7 @@ echo "Installing Homebrew"
 brew install libtool automake lsusb openssl libzip pkg-config
 git clone https://github.com/tihmstar/libirecovery
 cd libirecovery
+brew install libtool automake lsusb openssl libzip pkg-config
 ./autogen.sh
 make
 make install
