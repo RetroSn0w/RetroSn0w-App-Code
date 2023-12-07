@@ -35,9 +35,9 @@ ecid=$(./tools/igetnonce | grep "ECID=.*" -o | cut -c 6-)
 echo "$ecid"
 ./tools/tsschecker -m iPad4,3/iPad4,3.plist -e $ecid -d iPad4,3 -s -B j73ap --apnonce $nonce
 mv *.shsh blob.shsh2
-./tools/irecovery -f tools/blankfile.txt
-./tools/irecovery -f iPad4,3/temp/iBSS.ipad4.RELEASE.im4p
-./tools/irecovery -f iPad4,3/temp/iBEC.ipad4.RELEASE.im4p
+./tools/dependencies/libirecovery/tools/irecovery -f tools/blankfile.txt
+./tools/dependencies/libirecovery/tools/irecovery -f iPad4,3/temp/iBSS.ipad4.RELEASE.im4p
+./tools/dependencies/libirecovery/tools/irecovery -f iPad4,3/temp/iBEC.ipad4.RELEASE.im4p
 sleep 5
 ./tools/futurerestore -t blob.shsh2 -p iPad4,3/iPad4,3.plist -s iPad4,3/temp/sep.im4p -m iPad4,3/iPad4,3.plist -b baseband.bbfw iPad4,3/work
 cd iPad4,3
