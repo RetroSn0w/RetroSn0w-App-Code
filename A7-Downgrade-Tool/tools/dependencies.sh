@@ -1,4 +1,5 @@
 cd ~/Documents/RetroSn0w/A7-Downgrade-Tool/tools
+rm -rf dependencies
 chmod 777 futurerestore
 chmod 777 igetnonce
 chmod 777 iPwnder32
@@ -17,5 +18,4 @@ make
 make install
 cd ..
 cd ..
-rm -rf dependencies
 killall Terminal
