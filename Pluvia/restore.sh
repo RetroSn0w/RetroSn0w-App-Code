@@ -1,4 +1,5 @@
 #!/bin/bash
+chmod +x ./tools/iPwnder32
 
 realpath() {
     canonicalize_path "$(resolve_symlinks "$1")"
@@ -137,10 +138,10 @@ fi
 rm -rf "`realpath "$1" | sed 's/\.ipsw$//'`"
 killall iTunes iTunesHelper >/dev/null 2>&1 || true
 killall -STOP AMPDeviceDiscoveryAgent >/dev/null 2>&1 || true
-cd tools/ipwndfu
-arch -x86_64 /usr/bin/python ./ipwndfu -p
-cd ../..
+cd tools
+./iPwnder32 -p
 echo
+cd ..
 echo 'IMPORTANT: an "FDR" error is normal, ignore it'
 echo
 set +e
